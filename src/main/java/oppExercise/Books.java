@@ -1,10 +1,10 @@
 package oppExercise;
 
 public class Books {
-    private String title;
-    private String author;
-    private boolean available;
-    private  Person showPerson;
+    private static String title;
+    private static String author;
+    private static boolean available;
+    private static Person showPerson;
 
     public Books(String title, String author, boolean available){
         this.title=title;
@@ -13,7 +13,7 @@ public class Books {
     }
 
 
-    public String getTitle() {
+    public static String getTitle() {
         return title;
     }
 
@@ -22,7 +22,7 @@ public class Books {
         this.title = title;
     }
 
-    public String getAuthor() {
+    public static String getAuthor() {
         return author;
     }
 
@@ -31,17 +31,29 @@ public class Books {
         this.author = author;
     }
 
-    public boolean isAvailable() {
+    public static boolean isAvailable() {
         return available;
     }
 
     public void setAvailable(boolean available) {
         this.available = available;
     }
-    public  Person getShowPerson (){
+    public  static Person getShowPerson (Person showPerson){
         return showPerson;
     }
-    public  String BookInformation(){
-        return  "Book information: " + title + " "+ author+ " " + available ;
+    public  static String BookInformation(){
+        return  "Book information: " + title + " "+ author+ " " + available +  " "
+                + showPerson.getPersonId();
     }
+    public static void main(String[] args) {
+
+        Person Name = new Person("Hanna", "Johanna");
+
+        // System.out.println("PersonName: "+ name.getFirstname() +" "+ name.getLastName()+ " " + name.getPersonId());
+        System.out.println(Name.PersonInformation());
+        Books title = new Books("Java how to program","Paul Dei-tel",true);
+        System.out.println(title.BookInformation());
+
+    }
+
 }

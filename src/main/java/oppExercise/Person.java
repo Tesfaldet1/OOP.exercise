@@ -1,11 +1,11 @@
 package oppExercise;
 
 public class Person {
-    private  int personId = 100;
-    private String firstname;
-    private String lastName;
-    private Books LoanBook;
-    private String displayBooks;
+    private  static int personId = 100;
+    private static String firstname;
+    private static String lastName;
+    private static Books LoanBook;
+    private static String displayBooks;
 
 
     public Person(){
@@ -17,11 +17,11 @@ public class Person {
         this.lastName=lastName;
     }
 
-    public int getPersonId() {
+    public static int getPersonId() {
         return personId;
     }
 
-    public String getFirstname() {
+    public static String getFirstname() {
         return firstname;
     }
 
@@ -30,7 +30,7 @@ public class Person {
         this.firstname = firstname;
     }
 
-    public String getLastName() {
+    public static String getLastName() {
         return lastName;
     }
 
@@ -38,13 +38,13 @@ public class Person {
         if(lastName==null) throw new IllegalArgumentException();
         this.lastName = lastName;
     }
-    public Books getLoanBook(Books loanBook){
+    public static Books getLoanBook(Books loanBook){
         return loanBook;
     }
-    public  String getDisplayBooks(){
+    public static String getDisplayBooks(){
         return displayBooks;
     }
-    public  String PersonInformation(){
+    public static String PersonInformation(){
         return "Person information :"+ firstname +" "+ lastName + " "+ personId ;
     }
 }
