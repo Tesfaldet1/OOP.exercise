@@ -4,9 +4,9 @@ public class Person {
     private  int personId = 100;
     private String firstname;
     private String lastName;
-    //private Books LoanBook;
-    private String displayBooks;
     private Books LoanBook;
+    private String displayBooks;
+
 
     public Person(){
         this.personId=++personId;
@@ -26,7 +26,7 @@ public class Person {
     }
 
     public void setFirstname(String firstname) {
-       // if(firstname==null)throw new IllegalArgumentException();
+        if(firstname==null)throw new IllegalArgumentException();
         this.firstname = firstname;
     }
 
@@ -35,7 +35,7 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
-       // if(lastName==null) throw new IllegalArgumentException();
+        if(lastName==null) throw new IllegalArgumentException();
         this.lastName = lastName;
     }
     public Books getLoanBook(Books loanBook){
