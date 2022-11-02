@@ -18,7 +18,7 @@ public class Books {
     }
 
     public void setTitle(String title) {
-        if(title==null)throw new IllegalArgumentException();
+        //if(title==null)throw new IllegalArgumentException();
         this.title = title;
     }
 
@@ -27,7 +27,7 @@ public class Books {
     }
 
     public void setAuthor(String author) {
-        if(author==null)throw  new IllegalArgumentException();
+        //if(author==null)throw  new IllegalArgumentException();
         this.author = author;
     }
 
@@ -40,5 +40,8 @@ public class Books {
     }
     public  Person getShowPerson (){
         return showPerson;
+    }
+    public  String BookInformation(){
+        return  "Book information: " + title + " "+ author+ " " + available ;
     }
 }

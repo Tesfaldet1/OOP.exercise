@@ -6,6 +6,7 @@ public class Person {
     private String lastName;
     //private Books LoanBook;
     private String displayBooks;
+    private Books LoanBook;
 
     public Person(){
         this.personId=++personId;
@@ -25,7 +26,7 @@ public class Person {
     }
 
     public void setFirstname(String firstname) {
-        if(firstname==null)throw new IllegalArgumentException();
+       // if(firstname==null)throw new IllegalArgumentException();
         this.firstname = firstname;
     }
 
@@ -34,7 +35,7 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
-        if(lastName==null) throw new IllegalArgumentException();
+       // if(lastName==null) throw new IllegalArgumentException();
         this.lastName = lastName;
     }
     public Books getLoanBook(Books loanBook){
@@ -44,6 +45,6 @@ public class Person {
         return displayBooks;
     }
     public  String PersonInformation(){
-        return "Person information :"+ firstname +" "+ lastName + " "+ personId;
+        return "Person information :"+ firstname +" "+ lastName + " "+ personId ;
     }
 }
